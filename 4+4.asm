@@ -6,15 +6,15 @@ _start:
    mov cl, al
    add cl, al
    add cl, 0x30
-   push cx
+   push ecx
         
-   inc bl
-   inc dl
+   inc ebx
+   inc edx
    mov ecx, esp      
    int 0x80
    
-   inc al
-   xor bl, bl
+   inc eax
+   dec ebx
    int 0x80
    
-   ;25octets
+   ;20octets
