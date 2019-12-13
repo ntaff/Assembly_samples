@@ -13,7 +13,7 @@ _start:
    mov ecx, esp      
    int 0x80
    
-   mov al, 1
+   inc al
    xor bl, bl
    int 0x80
    
