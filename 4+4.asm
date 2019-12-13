@@ -13,8 +13,7 @@ _start:
    mov ecx, esp      
    int 0x80
    
-   inc eax
    dec ebx
    int 0x80
    
-   ;20octets
+   ;19octets
