@@ -2,12 +2,12 @@ section .text
    global _start
 _start:
 
-   mov al, 0x4
-   mov cl, al
-   add cl, al
+   mov cl, 0x4
+   shl cl, 0x1
    add cl, 0x30
    push ecx
-        
+     
+   mov al, 0x4   
    inc ebx
    inc edx
    mov ecx, esp      
