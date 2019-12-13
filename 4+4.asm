@@ -2,18 +2,19 @@ section .text
    global _start
 _start:
 
-   mov eax, 4
-   mov ebx, 4
-   add eax, ebx
-   add eax, '0'
-   push eax
-
-   mov eax, 4        
-   mov ebx, 1
-   mov ecx, esp    
-   mov edx, 1        
+   mov al, 0x4
+   mov cl, al
+   add cl, al
+   add cl, 0x30
+   push cx
+        
+   inc bl
+   inc dl
+   mov ecx, esp      
    int 0x80
    
-   mov eax, 1
-   xor ebx, ebx
+   mov al, 1
+   xor bl, bl
    int 0x80
+   
+   ;25octets
